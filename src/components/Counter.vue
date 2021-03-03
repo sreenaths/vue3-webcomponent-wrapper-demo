@@ -11,7 +11,7 @@ export default {
   props: {
     value: Number
   },
-  emits: ["click"],
+  emits: ["change"],
   data() {
     return {
       valueInternal: this.value
@@ -19,7 +19,7 @@ export default {
   },
   watch: {
     valueInternal: function() {
-      this.$emit("click", this.valueInternal);
+      this.$emit("change", this.valueInternal);
     }
   }
 };
